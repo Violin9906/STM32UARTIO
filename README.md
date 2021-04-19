@@ -3,7 +3,7 @@ STM32 UART IO Redirect
 
 ## 描述
 
-本库用于STM32重定向`printf()`和`scanf()`到UART串口（代码中为UART4），使用HAL库编写。
+本库用于STM32重定向`printf()`和`scanf()`到UART串口（代码中为UART1），使用HAL库编写。
 
 ## 示例
 
@@ -11,7 +11,7 @@ STM32 UART IO Redirect
 /* ----main.c---- */
 #include "uartio.h"
 // ......
-UART_HandleTypeDef huart4;
+UART_HandleTypeDef huart1;
 
 int main() {
     // ......

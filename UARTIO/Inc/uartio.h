@@ -11,4 +11,6 @@
 #include "main.h"
 #include "stdio.h"
 
+#define __UART_HANDLE_UARTIO huart1
+
 #endif /* INC_UARTIO_H_ */
