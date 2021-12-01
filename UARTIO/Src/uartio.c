@@ -2,7 +2,7 @@
  * uartio.c
  *
  *  Created on: Jun 21, 2020
- *      Author: Violin
+ *      Author: Violin9906
  */
 
 #include "uartio.h"
@@ -36,14 +36,14 @@ GETCHAR_PROTOTYPE {
 #ifdef __GNUC__
     PUTCHAR('\r');
 #else
-    PUTCHAR('\r', NULL);
+    PUTCHAR('\r', stdout);
 #endif
     ch = '\n';
   }
 #ifdef __GNUC__
   return PUTCHAR(ch);
 #else
-  return PUTCHAR(ch, NULL);
+  return PUTCHAR(ch, stdout);
 #endif
 }
 
@@ -54,7 +54,7 @@ int _read(int file, char *ptr, int len) {
 #ifdef __GNUC__
     *ptr = GETCHAR();
 #else
-    *ptr = GETCHAR(NULL);
+    *ptr = GETCHAR(stdin);
 #endif
     if (*ptr++ == '\n')
       break;
